@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: play;
+	src: url(../webfonts/Play-Regular.eot);
+	src: url(../webfonts/Play-Regular.woff) format("woff"),
+		 url(../webfonts/Play-Regular.ttf) format("ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #bbb;
+}
+img {
+	border: 0;
+}
+
+body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	font-family: play;
+}
+.wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	min-width: 1024px;
+	min-height: 768px;
+	perspective: 900px;
+}
+.menu {
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	display: block;
+	width: 20px;
+	height: 70px;
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	z-index: 3;
+	animation: ani 0.5s infinite alternate;
+}
+@keyframes ani {
+	from {
+		transform: scale(1);
+		opacity: : 1;
+		color: #fff;
+	}
+	to {
+		transform: scale(1.5);
+		opacity: : 0.8;
+		color: #888;
+	}
+}
+nav {
+	position: fixed;
+	width: 150px;
+	height: 100%;
+	background: #ccc;
+	opacity: 0;
+	z-index: 3;
+	transform: rotateY(120deg);
+	transform-origin: left center;
+}
+nav.on {
+	transform: rotateY(15deg);
+	opacity: 1;
+}
+nav h2 {
+	position: absolute;
+	top: 80px;
+	left: 17%;
+	width: 100px;
+}
+nav h2 img {
+	width: 100%;
+}
+#gnb {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+}
+#gnb li a {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	line-height: 4;
+	color: #000;
+	text-align: center;
+	transition: all 0.5s;
+}
+#gnb li a:hover {
+	color: #fff;
+	background: #000;
+}
+section {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #555;
+	transform-origin: right center;
+	transition: all 0.5s;
+}
+section.on {
+	transform: rotateY(-10deg);
+}
+section > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	perspective: 700px;
+	transition: all 1s;
+}
+section > div.on {
+	opacity: 1;
+}
+section > div > p {
+	transform: rotateY(180deg);
+	transition: all 1s;
+}
+section > div.on > p {
+	transform: rotateY(0deg);
+	transition: all 1s;
+}
+.box1 > p {
+	height: 25%;
+	float: left;
+	text-align: center;
+}
+.box1 > p span {
+	color: #fff;
+	font-size: 20px;
+}
+.box1 > p:nth-child(1) {
+	width: 50%;
+	background: #333;	
+	color: #fff;
+	font-size: 42px;
+	padding-top: 70px;
+	box-sizing: border-box;
+}
+.box1 > p:nth-child(2) {
+	width: 25%;
+	background: #ccc url(../img/m1.jpg);
+	background-size: cover;
+}
+.box1 > p:nth-child(3) {
+	width: 25%;
+	background: #444;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.box1 > p:nth-child(3) i {
+	padding-right: 20px;
+	color: ccc;
+	transition: all 0.5s;
+}
+.box1 > p:nth-child(3) i:hover {
+	color: #fff;
+	transform: scale(1.5);
+}
+.box1 > p:nth-child(4) {
+	width: 50%;
+	height: 50%;
+	background: url(../img/m2.jpg);
+	background-size: cover;
+	float: right;
+}
+.box1 > p:nth-child(5) {
+	width: 25%;
+	background: #fff url(../img/m3.jpg) no-repeat;
+	background-size: contain;
+	float: right;
+}
+.box1 > p:nth-child(6) {
+	width: 25%;
+	background: #888;
+	float: right;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box1 > p:nth-child(7) {
+	width: 25%;
+	background: #444;
+	float: right;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box1 > p:nth-child(8) {
+	width: 25%;
+	background: url(../img/m4.jpg);
+	background-size: cover;
+	float: right;
+}
+.box1 > p:nth-child(9) {
+	width: 25%;
+	background: #444;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box1 > p:nth-child(10) {
+	width: 50%;
+	background: url(../img/m5.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.box1 > p:nth-child(11) {
+	width: 25%;
+	background: #444;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+
+.box2 > p {
+	height: 25%;
+	float: left;
+	text-align: center;
+}
+.box2 > p span {
+	color: #fff;
+	font-size: 24px;
+}
+.box2 > p:nth-child(1) {
+	width: 25%;
+	background: #444;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box2 > p:nth-child(2) {
+	width: 25%;
+	background: url(../img/w1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.box2 > p:nth-child(3) {
+	width: 50%;
+	background: #222;
+	color: #fff;
+	font-size: 48px;
+	padding-top: 70px;
+	box-sizing: border-box;
+}
+.box2 > p:nth-child(4) {
+	width: 25%;
+	height: 50%;
+	background: url(../img/w2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.box2 > p:nth-child(5) {
+	width: 50%;
+	height: 50%;
+	background: url(../img/w3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.box2 > p:nth-child(6) {
+	width: 25%;
+	background: #fff url(../img/w4.jpg) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.box2 > p:nth-child(7) {
+	width: 25%;
+	background: #555;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box2 > p:nth-child(8) {
+	width: 25%;
+	background: url(../img/w5.jpg);
+	background-size: cover;
+}
+.box2 > p:nth-child(9) {
+	width: 25%;
+	background: #555;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box2 > p:nth-child(10) {
+	width: 25%;
+	background: url(../img/w6.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.box2 > p:nth-child(11) {
+	width: 25%;
+	background: url(../img/w7.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.box3 > p {
+	height: 25%;
+	float: left;
+	text-align: center;
+}
+.box3 > p span {
+	color: #fff;
+	font-size: 24px;
+}
+.box3 > p:nth-child(1) {
+	width: 50%;
+	height: 100%;
+	background: url(../img/k1.jpg);
+	background-size: cover;
+}
+.box3 > p:nth-child(2) {
+	width: 25%;
+	background: #555;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box3 > p:nth-child(3) {
+	width: 25%;
+	background: url(../img/k2.jpg);
+	background-size: cover;
+}
+.box3 > p:nth-child(4) {
+	width: 50%;
+	background: #222;
+	color: #fff;
+	font-size: 48px;
+	padding-top: 70px;
+	box-sizing: border-box;
+}
+.box3 > p:nth-child(5) {
+	width: 25%;
+	height: 50%;
+	background: url(../img/k3.jpg);
+	background-size: cover;
+}
+.box3 > p:nth-child(6) {
+	width: 25%;
+	background: #777;
+	color: #fff;
+	padding-top: 90px;
+	box-sizing: border-box;
+}
+.box3 > p:nth-child(7) {
+	width: 25%;
+	background: url(../img/k4.jpg);
+	background-size: cover;
+}
